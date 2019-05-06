@@ -31,6 +31,7 @@ load("//internal/node:node_repositories.bzl", _node_repositories = "node_reposit
 load("//internal/npm_install:npm_install.bzl", _npm_install = "npm_install", _yarn_install = "yarn_install")
 load("//internal/npm_package:npm_package.bzl", _npm_package = "npm_package")
 load("//internal/rollup:rollup_bundle.bzl", _rollup_bundle = "rollup_bundle")
+load("//npm_bazel_typescript:index.bzl", _ts_library="ts_library")
 
 check_bazel_version = _check_bazel_version
 nodejs_binary = _nodejs_binary
@@ -41,6 +42,7 @@ rollup_bundle = _rollup_bundle
 npm_package = _npm_package
 history_server = _history_server
 http_server = _http_server
+ts_library = _ts_library
 # ANY RULES ADDED HERE SHOULD BE DOCUMENTED, run yarn skydoc to verify
 
 # Allows us to avoid a transitive dependency on bazel_skylib from leaking to users

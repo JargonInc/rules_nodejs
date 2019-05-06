@@ -14,13 +14,13 @@
 
 "TypeScript compilation"
 
-load("@build_bazel_rules_nodejs//internal/common:node_module_info.bzl", "NodeModuleInfo", "NodeModuleSources", "collect_node_modules_aspect")
+load("//internal/common:node_module_info.bzl", "NodeModuleInfo", "NodeModuleSources", "collect_node_modules_aspect")
 
 # pylint: disable=unused-argument
 # pylint: disable=missing-docstring
-load("@build_bazel_rules_typescript//internal:common/compilation.bzl", "COMMON_ATTRIBUTES", "DEPS_ASPECTS", "compile_ts", "ts_providers_dict_to_struct")
-load("@build_bazel_rules_typescript//internal:common/tsconfig.bzl", "create_tsconfig")
-load("//internal:ts_config.bzl", "TsConfigInfo")
+load(":common/compilation.bzl", "COMMON_ATTRIBUTES", "DEPS_ASPECTS", "compile_ts", "ts_providers_dict_to_struct")
+load(":common/tsconfig.bzl", "create_tsconfig")
+load(":ts_config.bzl", "TsConfigInfo")
 
 _DEFAULT_COMPILER = "@npm//@bazel/typescript/bin:tsc_wrapped"
 

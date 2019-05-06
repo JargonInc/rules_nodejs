@@ -119,7 +119,7 @@ def get_module_mappings(label, attrs, srcs = [], workspace_name = None, mappings
 
 def _module_mappings_aspect_impl(target, ctx):
     mappings = get_module_mappings(target.label, ctx.rule.attr)
-    return struct(es6_module_mappings = mappings)
+    return [struct(es6_module_mappings = mappings)]
 
 module_mappings_aspect = aspect(
     _module_mappings_aspect_impl,

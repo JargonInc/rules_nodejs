@@ -26,7 +26,7 @@ load(":node_labels.bzl", "get_yarn_node_repositories_label")
 
 # Callers that don't specify a particular version will get these.
 DEFAULT_NODE_VERSION = "10.16.3"
-DEFAULT_YARN_VERSION = "1.19.0"
+DEFAULT_YARN_VERSION = "1.22.4"
 
 # Dictionary mapping NodeJS versions to sets of hosts and their correspoding (filename, strip_prefix, sha256) tuples.
 NODE_REPOSITORIES = {
@@ -70,6 +70,7 @@ NODE_REPOSITORIES = {
 
 # Dictionary mapping Yarn versions to their correspoding (filename, strip_prefix, sha256) tuples.
 YARN_REPOSITORIES = {
+    "1.22.4": ("yarn-v1.22.4.tar.gz", "yarn-v1.22.4", "bc5316aa110b2f564a71a3d6e235be55b98714660870c5b6b2d2d3f12587fb58"),
     "1.19.0": ("yarn-v1.19.0.tar.gz", "yarn-v1.19.0", "6bbdaab9c31eedbe7b53cbcde2be06b8c926f139bd0f7c00fccad406016e8934"),
     "1.12.1": ("yarn-v1.12.1.tar.gz", "yarn-v1.12.1", "09bea8f4ec41e9079fa03093d3b2db7ac5c5331852236d63815f8df42b3ba88d"),
     "1.12.3": ("yarn-v1.12.3.tar.gz", "yarn-v1.12.3", "02cd4b589ec22c4bdbd2bc5ebbfd99c5e99b07242ad68a539cb37896b93a24f2"),
